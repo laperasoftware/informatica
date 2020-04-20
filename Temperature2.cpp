@@ -1,6 +1,5 @@
 
 #include<stdio.h>
-#include<conio.h>
 #include<time.h>
 #include<stdlib.h>
 
@@ -44,7 +43,7 @@ int main(){
 (durante tutta la settimana)
 3) In che giorno della settimana si è avuta la temperatura
 media più bassa (media su tutte le città)*/
-	printf("\nInserire quale opzione si vuole viusalizzare:\n1) Quale città ha avuto la temperatura piu' calda il Giovedi'\n2) Quante  città hanno avuto temperatura sotto lo zero il Lunedi\n3) La temperatura media della terza città\n");
+	printf("\nInserire quale opzione si vuole viusalizzare:\n1) Quale citta ha avuto la temperatura piu' calda il Giovedi'\n2) Quante  citta hanno avuto temperatura sotto lo zero il Lunedi\n3) La temperatura media della terza citta\n");
 	scanf("%d",&scelta);
 	if(scelta==1){
 			max=M[0][0];
@@ -83,30 +82,45 @@ media più bassa (media su tutte le città)*/
 		}
 		printf("La temperatura media piu' bassa si e' presentata nella citta %d",cit);				
     }
-    else if(scelta==3){
-    	/*float media [nr]; //per ogni città ho la sua media			
-		for (i=0;i<nr;i++) {
-			media[i] = 0; //inizializzo x sicurezza
-			media [i] = mediaaa(M[i], 7);
-		/*	for (int g = 0; g<7; g++) {
-				media[i]+=M[i][g]; // a += b <===> a = a + b
-			}
-			media[i] = media[i]/7.0;
-		} */
-		for(i=0;i<n)
-		min=media[0];
-		for(i=0;i<nr;i++){
-			if(media[i]<min){
-				min=media[i];
-				cit=i;
-			}
-		}		
-		for(i=0;i<nr;i++){
-		    printf("\n%f",media[i]);
+
+
+    else if(scelta==3){ //giorno della settimana con temperatura media più bassa
+
+    	//la temperatura media per ogni giorno
+    	int mediaGiornaliera [7]; //fisso subito dimensione essendoci 7 giorni
+
+    	int sum, media;
+
+    	for (int g = 0; g < 7; ++g)//per ogni giorno della settimana
+    	{
+    		int sum = 0; //inizializzo
+    		for (int citta = 0; citta < nr; ++citta) //fissato il giorno giro tutte le citta
+    			{
+    				sum += M[citta][g];
+    			}	
+    		mediaGiornaliera[g] = sum / nr;
+    	}
+		
+		printf("\n MEDIE GIORNALIERE: \n");
+		for (int med = 0; med < 7; ++med) //stampa di debug per vedere se funziona
+		{
+			printf("%d\t", mediaGiornaliera[med]);
 		}
-		printf("La temperatura media piu' bassa si e' presentata il giorno numero %d",cit);				
+
+		//trovo indice elemento minimo
+		int minimo = 1024; //inizializzo a valore non possibile
+		int indiceMinimo = -1;
+
+		for (int g = 0; g<7; g++) {
+			if (mediaGiornaliera[g]<minimo) {
+				indiceMinimo = g;
+				minimo = mediaGiornaliera[g];
+			}
+		}
+
+		printf("\n\nIl giorno come la temperatura media piu bassa >>> %d\n\n", indiceMinimo + 1);
     }
-	getch();
+	//getch();
 }
 
 
