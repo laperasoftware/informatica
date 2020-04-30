@@ -24,16 +24,11 @@ main(){
 			printf("%5d",M[i][j]);
 			}
 		}
-/*1) QUALE città ha avuto la temperatura più alta
-(nell’intera settimana)
-2) Chi ha avuto mediamente la temperatura più fredda
-(durante tutta la settimana)
-3) In che giorno della settimana si è avuta la temperatura
-media più bassa (media su tutte le città)*/
-	printf("\nInserire quale opzione si vuole viusalizzare:\n1) Quale città ha avuto la temperatura piu' calda il Giovedi'\n2) Quante  città hanno avuto temperatura sotto lo zero il Lunedi\n3) La temperatura media della terza città\n");
+	printf("\nInserire quale opzione si vuole viusalizzare:\n1) Quale città ha avuto la temperatura piu' calda il Giovedi'\n2) Quante  città hanno avuto temperatura sotto lo zero il Lunedi\n3) La temperatura media della terza citta'\n");
 	scanf("%d",&scelta);
 	if(scelta==1){
 			i=3;
+			max=M[0][0];
 			for(j=1;j<nr+1;j++){
 				if(M[i][j]>max){
 					max=M[i][j];

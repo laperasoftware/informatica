@@ -3,16 +3,6 @@
 #include<time.h>
 #include<stdlib.h>
 #include<conio.h>
-float mediaaa (int valori[], int dimensione) {
-	int med = 0;
-	for (int i = 0; i<dimensione; i++) {
-		med = med + valori[i];
-	}
-	med = med / dimensione;
-	return med;
-}
-
-
 int main(){
 	int nr,nc,i,j,scelta,min,max,cont,somma,cit,k;
 	float med;
@@ -62,23 +52,23 @@ media più bassa (media su tutte le città)*/
 		
 	
 		for (i=0;i<nr;i++) {
-			media[i] = 0; //inizializzo x sicurezza
-			media [i] = mediaaa(M[i], 7);
-		/*	for (int g = 0; g<7; g++) {
-				media[i]+=M[i][g]; // a += b <===> a = a + b
+			medie[i] = 0; //inizializzo x sicurezza
+			medie [i] = mediaaa(M[i], 7);
+			for (int g = 0; g<7; g++) {
+				medie[i]+=M[i][g]; // a += b <===> a = a + b
 			}
-			media[i] = media[i]/7.0;
-		} */
+			medie[i] = medie[i]/7.0;
+		} 
 		}
-		min=media[0];
+		min=medie[0];
 		for(i=0;i<nr;i++){
-			if(media[i]<min){
-				min=media[i];
+			if(medie[i]<min){
+				min=medie[i];
 				cit=i;
 			}
 		}		
 		for(i=0;i<nr;i++){
-		    printf("\n%f",media[i]);
+		    printf("\n%f",medie[i]);
 		}
 		printf("\nLa temperatura media piu' bassa si e' presentata nella citta %d",cit);				
     }
