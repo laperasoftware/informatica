@@ -3,14 +3,6 @@
 #include<time.h>
 #include<stdlib.h>
 #include<conio.h>
-float mediaaa (int valori[], int dimensione) {
-	int med = 0;
-	for (int i = 0; i<dimensione; i++) {
-		med = med + valori[i];
-	}
-	med = med / dimensione;
-	return med;
-}
 
 
 int main(){
@@ -62,8 +54,17 @@ media più bassa (media su tutte le città)*/
 		
 	
 		for (i=0;i<nr;i++) {
+
 			media[i] = 0; //inizializzo x sicurezza
-			media [i] = mediaaa(M[i], 7);
+
+			int med = 0;
+				for (int j = 0; j<7 j++) {
+				med = med + M[i]+[j];
+			}
+
+			med = med / dimensione;
+
+			media [i] = med;
 		/*	for (int g = 0; g<7; g++) {
 				media[i]+=M[i][g]; // a += b <===> a = a + b
 			}
