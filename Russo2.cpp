@@ -43,12 +43,7 @@ int main(){ int i,j,r,c,t,sr,somma,sc,scelta;
 		il conteggio dei valori pari sulla riga centrale e di quelli dispari sulla colonna centrale(sempre se presente)*/
 	
 	
-	/*printf("\nselezionare una fra le seguenti opzioni: \n 1) stampare la diagonale principale e la relativa somma\n 
-	//2) ove presente, quella secondaria con la somma6 case\n 
-	3) la somma della riga selezionata dall'utente\n 
-	4) la somma della colonna selezionata dall'utente\n 
-	5) il conteggio dei valori pari sulla riga centrale e di quelli dispari sulla colonna centrale\n
-	 6) uscita\n ");*/
+	printf("\nselezionare una fra le seguenti opzioni: \n 1) stampare la diagonale principale e la relativa somma\n 2) ove presente, quella secondaria con la somma case\n 3) la somma della riga selezionata dall'utente\n 4) la somma della colonna selezionata dall'utente\n 5) il conteggio dei valori pari sulla riga centrale e di quelli dispari sulla colonna centrale\n 6) uscita\n ");
 	 printf("\n INSERIRE SCELTA:\t");
 	scanf("%d",&scelta);
 
@@ -70,8 +65,6 @@ int main(){ int i,j,r,c,t,sr,somma,sc,scelta;
 			}
 		} */
 	printf("\nla somma degli elementi e'%d",somma);
-	
-	//somma diagonale secondaria
 	int somma2 = 0;
 
 		for(i=0;i<r;i++){

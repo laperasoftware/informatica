@@ -4,7 +4,7 @@
 #include<conio.h>
 int main(){
 	int v[20];
-	int i,k,len,val;
+	int i,k,len,val,x,pos;
 	val=0;
 	printf("inserire la lunghezza del vettore\n");
 	scanf("%d",&len);
@@ -21,11 +21,19 @@ int main(){
 		printf("%5d",v[i]);
 	}
 	printf("\ninserire il numero che si vuole inserire nel vettore\n");
-	scanf("%d",&k);
+	scanf("%d",&x);
 	for(i=0;i<len;i++){
-		if(v[i]<k&&v[i+1]>k){
+		if(v[i]<x&&v[i+1]>x){
 			printf("il numero verra' inserito fra la posizione %d e la posizione %d\n",i+1,i);
+			pos=i;
 		}
 	}
-	
+	len++;
+	for(i=len;i>pos;i--){
+		v[i+1]=v[i];
+	}
+	v[pos+1]=x;
+	for(i=0;i<len;i++){
+		printf("%d",v[i]);
+	}
 }
