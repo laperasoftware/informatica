@@ -32,7 +32,7 @@ int main(){
 	for(i=len;i>pos;i--){
 		v[i+1]=v[i];
 	}
-	v[pos+1]=x;
+	//v[pos+1]=x;
 	for(i=0;i<len;i++){
 		printf("%d",v[i]);
 	}
