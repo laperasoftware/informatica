@@ -80,21 +80,26 @@ int main(){
 					printf("INSERIMENTO DI UN NUMERO IN UN VETTORE\n");
 					printf("\ninserire il numero che si vuole inserire nel vettore\n");
 					scanf("%d",&x);
-					for(i=0;i<len;i++){
-						if(v[i]<x&&v[i+1]>x){
-							printf("il numero verra' inserito fra la posizione %d e la posizione %d\n",i,i+1);
-							pos=i+1;
-						}
+					if(len==-1) {
+					    len=1;
 					}
+					v[len]=x; 
 					len++;
-					for(i=len;i>=pos;i--){
-						v[i+1]=v[i];
-					}
-					v[pos]=x;
+					 for(k=0; k<len;k++) {
+				        for (c=0;c<len-1;c++) {
+				             if(v[c]>v[c+1]) {
+				                 int aux = v[c+1];
+				                 v[c+1] = v[c];
+				                 v[c] = aux;
+				             }
+				         }
+					 }
 					for(i=0;i<len;i++){
-						printf("%d\t",v[i]);
-					}
-					break;
+					printf("%d\t",v[i]);
+					}		
+					break;	
+		}
+	}
 				case 4:
 					printf("ELIMINAZIONE DI UN ELEMENTO DAL VETTORE\n");
 					printf("\ninserire il numero che si vuole eliminare dal vettore\n");
@@ -161,21 +166,26 @@ int main(){
 					printf("INSERIMENTO DI UN NUMERO IN UN VETTORE\n");
 					printf("\ninserire il numero che si vuole inserire nel vettore\n");
 					scanf("%d",&x);
-					for(i=0;i<len;i++){
-						if(v[i]<x&&v[i+1]>x){
-							printf("il numero verra' inserito fra la posizione %d e la posizione %d\n",i,i+1);
-							pos=i+1;
-						}
+					if(len==-1) {
+					    len=1;
 					}
+					v[len]=x; 
 					len++;
-					for(i=len;i>=pos;i--){
-						v[i+1]=v[i];
-					}
-					v[pos]=x;
+					 for(k=0; k<len;k++) {
+				        for (c=0;c<len-1;c++) {
+				             if(v[c]>v[c+1]) {
+				                 int aux = v[c+1];
+				                 v[c+1] = v[c];
+				                 v[c] = aux;
+				             }
+				         }
+					 }
 					for(i=0;i<len;i++){
-						printf("%d\t",v[i]);
-					}
-					break;
+					printf("%d\t",v[i]);
+					}		
+					break;	
+		}
+	}
 				case 4:
 					printf("ELIMINAZIONE DI UN ELEMENTO DAL VETTORE\n");
 					printf("\ninserire il numero che si vuole eliminare dal vettore\n");

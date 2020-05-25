@@ -2,7 +2,6 @@
 #include<time.h>
 #include<windows.h>
 #include<conio.h>
-//.o
 int main(){
 	int	M1[20][20];
 	int M2[20][20];
@@ -24,8 +23,8 @@ int main(){
 	
 	for(i=0;i<r;i++){
 	for(j=0;j<c;j++){
-		M1[i][j]=rand()%4-1;
-		M2[i][j]=rand()%4-1;
+		M1[i][j]=rand()%3+1;
+		M2[i][j]=rand()%3+1;
 		}
 	}
 	printf("MATRICE 1:\n");
@@ -81,4 +80,5 @@ int main(){
 			} 
 		}
 	}
+	getch(); 
 }
