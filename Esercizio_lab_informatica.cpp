@@ -52,13 +52,14 @@ int main(){
 				if(c%2==0){
 					printf("Nella matrice non e' presente la colonna centrale\n");
 					}
-					
+				else{
 					for(j=0;j<r;j++){
 						printf("\t");
 						printf("%d",M[c/2][j]);
 					}
 				printf("\n");
 				}
+			}
 		if(scelta==3)
 				if(r%2==0){
 					printf("Nella matrice non e' presente la colonna centrale\n");

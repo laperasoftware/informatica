@@ -5,7 +5,6 @@
 main(){
 	int vet [20];
 	int i,j,len,aux;
-	srand(time(0));
 	printf("inserire lunghezza vettore (Max 20)\n");
 	scanf("%d",&len);
 	while(len<=0||len>20){
@@ -13,7 +12,8 @@ main(){
 		scanf("%d",&len);
 	}
 	for(i=0;i<len;i++){
-		vet[i]=rand()%20-5;
+		printf("Inserire un valore\n");
+		scanf("%d",&vet[i]);
 	}
 	for(i=0;i<len;i++){
 		printf("%d\t",vet[i]);
